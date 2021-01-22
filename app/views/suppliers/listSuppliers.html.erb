@@ -1,0 +1,30 @@
+<h3 class="text-center" style="font-family: cursive">Listado de Proveedores</h3>
+<a href="/suppliers/addSupplier">Agregar Proveedor</a>
+<br>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre del Proveedor</th>
+      <th scope="col">Direccion</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Celular</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tbody style="background-color: #FEB706">
+    <%@suppliers.each do |supplier|%>
+            <tr>
+            <td><%=supplier.id%></td>
+            <td><%=supplier.strNombreProveedor%></td>	
+            <td><%=supplier.strDireccion%></td>
+            <td><%=supplier.strTelefono%></td>
+            <td><%=supplier.strCelular%></td>	
+            <td>
+						<%=link_to "Editar", class:"btn btn-info	"%>
+					</td>
+            </tr>	
+    <%end%>
+	</tbody>
+</table>

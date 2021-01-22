@@ -1,0 +1,48 @@
+<div class="card col-md-offset-2 col-md-8 border-dark">
+  <div class="card-header text-white bg-dark mb-3 text-center">
+    Agregar Proveedor
+  </div>
+		<div class="card-body">
+			<%= form_for(model: @supplier) do |form|  %>
+			<div class="row">
+			<div class="col-md-6">
+			<%= form.label "Nombre del Proveedor:"%>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
+							<%= form.text_field :strNombreProveedor,placeholder: "Ejemplo: Marinela" ,class:"form-control"%>
+						</div>
+			</div>
+			<div class="col-md-6">
+			<%= form.label "Direccion del Proveedor:"%>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span> 
+							<%= form.text_field :strDireccion,placeholder: "Ejemplo: Avenida 16 de Septiembre" ,class:"form-control"%>
+						</div>
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-md-6">
+			<%= form.label "Telefono Fijo:"%>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span> 
+							<%= form.text_field :strTelefono,placeholder: "Ejemplo: 73129129" ,class:"form-control"%>
+						</div>
+			</div>
+			<div class="col-md-6">
+			<%= form.label "Telefono Celular:"%>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span> 
+							<%= form.text_field :strCelular,placeholder: "Ejemplo: 7731281224" ,class:"form-control"%>
+						</div>
+			</div>
+			</div>
+			<br>
+			<div class="form-group row">
+							<div class="container text-center">
+							    <%= form.submit "Aceptar" , class:"btn btn-success col-md-3" %>
+							</div>
+						</div>
+			<%end%>
+		</div>
+</div>
+
